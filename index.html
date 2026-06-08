@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta property="og:image" content="https://i.ibb.co/sp4pnDY/T.jpg" /> -->
+    <meta property="og:image"
+        content="https://avatars2.githubusercontent.com/u/72747807?s=400&amp;u=1f8b11f9b1998474c6502f5e46f6c77b1feba11d&amp;v=4">
+    <meta property="og:site_name" content="Slawomir Kaczynski" />
+    <meta property="og:title" content="I didn't want this to be another boring portfolio" />
+    <title>Slawomir Kaczynski</title>
+    <link rel='shortcut icon' type='image/x-icon' href='./img/favicon.ico' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const load = () => {
+            console.log("load event detected!");
+        }
+        window.onload = load;
+    </script>
+</head>
+
+<body>
+    <div id="matrix_intro" aria-live="polite">
+        <div id="matrix_intro_text" class="TextGlitch TextGlitch-intro">
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">myself</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">hacked</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">red pill</a>
+    <div id="middle" class="animated bounceInDown" style="animation-delay:2.0s;">
+        <h1 id="title" class="effect-shine TextGlitch">
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+            <div class="TextGlitch-clip">
+                <div class="TextGlitch-word"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendA"></div>
+                <div class="TextGlitch-word TextGlitch-blend TextGlitch-blendB"></div>
+            </div>
+        </h1>
+        <h2><a href="https://www.facebook.com/tyskie.bond" target="_blank">Developer <span>&&</span> Traveler
+                <span>&&</span> Your Guest</a></h2>
+        <div id="menu">
+            <a onclick="showabout()">myself</a>
+            <a onclick="showcontact()">red pill</a>
+            <a onclick="showwork()">hacked</a>
+        </div>
+        <table>
+            <tr>
+                <td class="animated zoomIn" style="animation-delay:2.2s;"><a
+                        href="https://www.linkedin.com/in/slawomir-kaczynski-50150a146/" target="_blank"
+                        class="social"><i class="fab fa-linkedin"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.4s;"><a href="https://github.com/N1Anoobis"
+                        target="_blank" class="social"><i class="fab fa-github"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>my projects</h1>
+        <section>
+            <div class="gallery-wrapper">
+                <a href="https://eloquent-feynman-54092b.netlify.app" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/error.jpg" alt="image">
+                        <figcaption>
+                            <p>Rxjs Angular custom email client</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://zealous-babbage-244425.netlify.app" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/ts.jpeg" alt="image">
+                        <figcaption>
+                            <p>React + Typescript + Redux, Hooks and map handling</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://warm-citadel-84598.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/MERN.png" alt="image">
+                        <figcaption>
+                            <p>MERN (MongoDB Express React Node.js) e-commerce. Full-stack</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://floating-retreat-59773.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/individual.png" alt="image">
+                        <figcaption>
+                            <p>Project in with only home page was required to pass. I have implemented all section in
+                                page. RWD, Modals, My custom menu.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/team-project/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/team.png" alt="image">
+                        <figcaption>
+                            <p>Team project I worked on therefor I can say that I have experience in commercial
+                                projects. I have added for instance RWD with is saved in store using Redux and can be
+                                used in all others components.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://guarded-anchorage-70607.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/react.png" alt="image">
+                        <figcaption>
+                            <p>My first encounter with Redux. I have manage to implement menu side bar using redux as
+                                extra exercise. I was also able to implement plugin react-beautiful-dnd with you can
+                                check by playing with cards. </p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://dry-retreat-23128.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/pizzeria.png" alt="image">
+                        <figcaption>
+                            <p>Website created for food orders using AJAX and API. I have added for example
+                                ability to edit orders and making multiple tables bookings.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://secret-caverns-41308.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/travel.png" alt="image">
+                        <figcaption>
+                            <p>Advanced project in with there is a lot of Redux ,React and React-Router.I added
+                                filtering by region and using moment.js i manage to give user information in how many
+                                days his trip will start.</p>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/Project-week02/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/week3.png" alt="image">
+                        <figcaption>
+                            <p>Project in with I implement few interesting effects. One of them is 3D Flip Box.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://aqueous-sea-14204.herokuapp.com" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/festival.jpeg" alt="image">
+                        <figcaption>
+                            <p>REST API middlewares Websocket Mongoose MongoDB Atlas. I coded display of free tickets on
+                                homepage as extra training</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://quirky-kalam-4a4cfc.netlify.app" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/nobooystrap.jpeg" alt="image">
+                        <figcaption>
+                            <p>Simple website i coded with NO use of bootstrap</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/Project-week01/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/matrix.jpeg" alt="image">
+                        <figcaption>
+                            <p>First bootcamp project I have added matrix rain made in css only and nice gradient
+                                button.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/Project-week03-extra/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/extra task.jpeg" alt="image">
+                        <figcaption>
+                            <p>Simple page I have coded without any using frameworks.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/Project-week03/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/bootstrap.jpeg" alt="image">
+                        <figcaption>
+                            <p>Project made using bootstrap 4.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/javascript-prework/" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/stone.jpeg" alt="image">
+                        <figcaption>
+                            <p>Stone paper scissors. An old chestnut. I have added ability to change difficulty level
+                                and also scores are being saved and can be displayed.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://n1anoobis.github.io/N1Anoobis-Project-week06extra/" target="_blank"
+                    class="gallery-item">
+                    <figure>
+                        <img src="img/calendar.jpeg" alt="image">
+                        <figcaption>
+                            <p>Calendar in with i have added ability to save tasks on particular day.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://quizzical-perlman-837a9f.netlify.app" target="_blank" class="gallery-item">
+                    <figure>
+                        <img src="img/tic.jpeg" alt="image">
+                        <figcaption>
+                            <p>Classic tic tac toe. One of the first javaScript encounters.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>my story</h1>
+        <section class="image-position">
+            <div class="glitch-demo">
+                <div class="glitch">
+                    <div class="glitch__img"></div>
+                    <div class="glitch__img"></div>
+                    <div class="glitch__img"></div>
+                    <div class="glitch__img"></div>
+                    <div class="glitch__img"></div>
+                </div>
+
+            </div>
+            <p class="testimony">
+                Front-end, Python, Linux.
+            </p>
+        </section>
+        <section>
+        </section>
+    </div>
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <h1>contact me</h1>
+        <section>
+            <form onsubmit="reload()" id="form" method="POST" id="gform"
+                action="https://script.google.com/macros/s/AKfycbx1-VeIEbxz5MUyYe5di9zvdjxP-YdpKxgkaLOo/exec">
+                <input type="text" placeholder="name" id="name" name="name" minlength="3" autocomplete="off" required>
+                <input type="email" placeholder="email" id="email" name="email"
+                    pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="off" required><br>
+                <textarea placeholder="your message" rows="5" id="message" name="message" minlength="3" maxlength="40"
+                    spellcheck="true" autocomplete="off" required></textarea><br>
+                <button class="btn_one " onclick="add()">send</button>
+            </form>
+        </section>
+    </div>
+    <div id="footer">
+        © Slawomir Kaczynski
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Thank You. Have a great day!</p>
+        </div>
+    </div>
+    <script src="glitch.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
