@@ -70,6 +70,16 @@ body {
   text-decoration: underline;
 }
 
+#middle.landing-hidden,
+#about.landing-hidden,
+#work.landing-hidden,
+#contact.landing-hidden,
+#footer.landing-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
 #middle {
   width: 100vw;
   height: 90vh;

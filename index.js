@@ -1,7 +1,7 @@
 let flag = false;
 let innerHight = null;
 let returnHight = null;
-const introMessage = "Follow the white rabbit.";
+const introMessage = "There is no spoon.";
 
 function add(){
     $('button').addClass("animated flip");
@@ -11,6 +11,7 @@ function add(){
 }
 
 function showabout() {
+    hideLanding();
     $("#about_container").css("display", "inherit");
     $("#about_container").addClass("animated bounceInLeft");
 }
@@ -30,9 +31,24 @@ function scheduleArrowGlitch(containerId) {
     }, delay);
 }
 
+function hideLanding() {
+    $('#middle, #footer').addClass('landing-hidden');
+    $('#about, #work, #contact').hide();
+}
+
+function showLanding() {
+    $('#middle, #footer').removeClass('landing-hidden');
+    $('#about, #work, #contact').css({
+        display: 'flex',
+        animationDelay: '0s',
+        WebkitAnimationDelay: '0s'
+    });
+}
+
 function closeabout() {
     addArrowGlitch('about_container');
     $("#about_container").addClass("animated slideOutLeft");
+    showLanding();
     setTimeout(function () {
         $("#about_container").removeClass("animated slideOutLeft");
         $("#about_container").css("display", "none");
@@ -40,6 +56,7 @@ function closeabout() {
 }
 
 function showwork() {
+    hideLanding();
     $("#work_container").css("display", "inherit");
     $("#work_container").addClass("animated bounceInRight");
 }
@@ -47,6 +64,7 @@ function showwork() {
 function closework() {
     addArrowGlitch('work_container');
     $("#work_container").addClass("animated slideOutRight");
+    showLanding();
     setTimeout(function () {
         $("#work_container").removeClass("animated slideOutRight");
         $("#work_container").css("display", "none");
@@ -56,8 +74,7 @@ function closework() {
 function showcontact() {
     innerHight = window.innerHeight;
     switchFlag();
-    console.log(innerHight)
-    
+    hideLanding();
     $("#contact_container").css("display", "inherit");
     $("#contact_container").addClass("animated bounceInUp");
 }
@@ -66,9 +83,9 @@ function closecontact() {
     addArrowGlitch('contact_container');
     returnHight = window.innerHeight;
     switchFlag();
-    console.log(returnHight)
     preventBug();
     $("#contact_container").addClass("animated slideOutDown");
+    showLanding();
     setTimeout(function () {
         $("#contact_container").removeClass("animated slideOutDown");
         $("#contact_container").css("display", "none");
