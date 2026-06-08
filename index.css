@@ -219,7 +219,7 @@ body {
   width: 90vw;
   height: 90vh;
   padding: 5vh 5vw;
-  background: black;
+  background: rgba(0, 0, 0, 0.72);
   color: #fff;
   z-index: 9;
   position: fixed;
@@ -472,7 +472,10 @@ h1 {
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .effect-shine {
@@ -1194,6 +1197,32 @@ iframe {
     min-width: 300px;
     min-height: 450px;
   }
+}
+
+/* Keep container close buttons visible while scrolling */
+#work_container > div:first-child,
+#about_container > div:first-child,
+#contact_container > div:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Red glitch on close arrows */
+@keyframes arrow-glitch-red {
+  0%   { transform: translate(0, 0);      color: #0f0; text-shadow: none; clip-path: none; }
+  10%  { transform: translate(-5px, 0);  color: #f00; text-shadow:  4px 0 rgba(255,0,0,.8); clip-path: polygon(0 20%, 100% 20%, 100% 45%, 0 45%); }
+  22%  { transform: translate( 5px, 0);  color: #ff4444; text-shadow: -4px 0 rgba(255,68,68,.8); clip-path: polygon(0 0, 100% 0, 100% 25%, 0 25%); }
+  36%  { transform: translate(-3px, 2px); color: #f00; text-shadow:  3px 0 rgba(255,0,0,.6); clip-path: polygon(0 60%, 100% 60%, 100% 75%, 0 75%); }
+  52%  { transform: translate( 3px,-1px); color: #ff2222; text-shadow: -3px 0 rgba(255,34,34,.7); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  66%  { transform: translate(-4px, 0);  color: #f00; text-shadow:  4px 0 rgba(255,0,0,.8); clip-path: polygon(0 30%, 100% 30%, 100% 55%, 0 55%); }
+  82%  { transform: translate( 2px, 0);  color: #ff4444; text-shadow: -2px 0 rgba(255,68,68,.6); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% { transform: translate(0, 0);     color: #0f0; text-shadow: none; clip-path: none; }
+}
+
+.arrow-glitch i {
+  display: inline-block;
+  animation: arrow-glitch-red 0.38s steps(1, end) forwards;
 }
 
 /* The Modal (background) */

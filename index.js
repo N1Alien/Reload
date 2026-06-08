@@ -15,7 +15,23 @@ function showabout() {
     $("#about_container").addClass("animated bounceInLeft");
 }
 
+function addArrowGlitch(containerId) {
+    const btn = document.querySelector('#' + containerId + ' > div:first-child');
+    if (!btn) return;
+    btn.classList.add('arrow-glitch');
+    setTimeout(() => btn.classList.remove('arrow-glitch'), 420);
+}
+
+function scheduleArrowGlitch(containerId) {
+    const delay = 100 + Math.random() * 4800;
+    setTimeout(() => {
+        addArrowGlitch(containerId);
+        scheduleArrowGlitch(containerId);
+    }, delay);
+}
+
 function closeabout() {
+    addArrowGlitch('about_container');
     $("#about_container").addClass("animated slideOutLeft");
     setTimeout(function () {
         $("#about_container").removeClass("animated slideOutLeft");
@@ -29,6 +45,7 @@ function showwork() {
 }
 
 function closework() {
+    addArrowGlitch('work_container');
     $("#work_container").addClass("animated slideOutRight");
     setTimeout(function () {
         $("#work_container").removeClass("animated slideOutRight");
@@ -46,6 +63,7 @@ function showcontact() {
 }
 
 function closecontact() {
+    addArrowGlitch('contact_container');
     returnHight = window.innerHeight;
     switchFlag();
     console.log(returnHight)
@@ -122,6 +140,9 @@ window.onload = function () {
     setTimeout(() => {
         martixRain();
     }, 120);
+    scheduleArrowGlitch('about_container');
+    scheduleArrowGlitch('work_container');
+    scheduleArrowGlitch('contact_container');
 };
 
 // Horizontal and vertical window resize events.
