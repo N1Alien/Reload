@@ -36,20 +36,22 @@ body {
 #matrix_intro_text {
   margin: 0;
   max-width: 100%;
-  font-family: "Courier New", monospace;
+  font-family: "Long Cang", cursive;
   font-size: clamp(28px, 5vw, 56px);
   text-align: center;
   letter-spacing: 0.08em;
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.7);
+  text-decoration: none;
 }
 
 #matrix_intro_text.TextGlitch {
   width: min(95vw, 1200px);
   font-size: clamp(28px, 5vw, 56px);
-  font-family: "Courier New", monospace;
+  font-family: "Long Cang", cursive;
   letter-spacing: 0.08em;
   color: #00ff41;
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.7);
+  text-decoration: none;
 }
 
 #matrix_intro_text .TextGlitch-word {
@@ -67,7 +69,8 @@ body {
   margin: 0px 6%;
   font-size: 19px;
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
+  font-family: "Long Cang", cursive;
 }
 
 #middle.landing-hidden,
@@ -118,6 +121,7 @@ body {
   height: 10vw;
   text-align: center;
   font-size: 25px;
+  font-family: "Long Cang", cursive;
   transform: rotate(-90deg);
   background: transparent;
   color: #fff;
@@ -140,6 +144,7 @@ body {
   height: 10vw;
   text-align: center;
   font-size: 25px;
+  font-family: "Long Cang", cursive;
   transform: rotate(90deg);
   background: transparent;
   color: #fff;
@@ -162,6 +167,7 @@ body {
   height: 10vw;
   text-align: center;
   font-size: 25px;
+  font-family: "Long Cang", cursive;
   background: transparent;
   color: #fff;
   position: fixed;
@@ -174,7 +180,7 @@ body {
   transition: 0.4s ease-in-out;
   border-radius: 100px 100px 0px 0px;
   border-color: transparent;
-  border: 1px solid rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.2);
   border-bottom: none;
 }
 
@@ -197,7 +203,7 @@ body {
 #contact:hover {
   background: black;
   cursor: pointer;
-  border: red 1px solid;
+  border: green 1px solid;
   border-bottom: none;
   color: green;
 }
@@ -333,6 +339,178 @@ body {
   font-weight: bold;
 }
 
+.cv_section {
+  min-height: 100%;
+  height: clamp(388px, 72vh, 900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6vh;
+}
+
+.cv-glitch-demo {
+  position: relative;
+  height: 500px;
+  width: 32px;
+  min-width: 500px;
+  min-height: 800px;
+}
+
+.cv-glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--glitch-width);
+  height: 100%;
+  overflow: hidden;
+}
+
+.cv-glitch__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(50%, 50%);
+  max-width: 500px;
+  max-height: 800px;
+  min-width: 500px;
+  min-height: 800px;
+  background: url("./img/Blue%20Minimal%20Infographic%20Resume.jpg");
+  background-color: var(--blend-color-1);
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, 0, 0);
+  background-blend-mode: var(--blend-mode-1);
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(n + 2) {
+  opacity: 0;
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(n + 2) {
+  animation-duration: var(--time-anim);
+  animation-delay: var(--delay-anim);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(2) {
+  background-color: var(--blend-color-2);
+  background-blend-mode: var(--blend-mode-2);
+  animation-name: glitch-anim-1;
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(3) {
+  background-color: var(--blend-color-3);
+  background-blend-mode: var(--blend-mode-3);
+  animation-name: glitch-anim-2;
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(4) {
+  background-color: var(--blend-color-4);
+  background-blend-mode: var(--blend-mode-4);
+  animation-name: glitch-anim-3;
+}
+
+.cv-glitch-demo:hover .cv-glitch__img:nth-child(5) {
+  background-color: var(--blend-color-5);
+  background-blend-mode: var(--blend-mode-5);
+  animation-name: glitch-anim-flash;
+}
+
+.cv_image {
+  width: 30%;
+  height: 50%;
+  object-fit: contain;
+  display: block;
+  border: 1px solid rgba(0, 255, 0, 0.35);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+}
+
+.cv_image:hover {
+  animation: cv-glitch-visible 4s 0.2s linear infinite;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 0, 0.25),
+    0 0 10px rgba(0, 255, 65, 0.6),
+    2px 0 0 rgba(255, 0, 0, 0.4),
+    -2px 0 0 rgba(0, 255, 65, 0.4);
+}
+
+@keyframes cv-glitch-visible {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  2% {
+    transform: translate3d(2px, 0, 0);
+    filter: brightness(1.1) saturate(1.5);
+  }
+  4% {
+    transform: translate3d(-2px, 0, 0);
+    filter: brightness(0.9) hue-rotate(90deg);
+  }
+  6% {
+    transform: translate3d(1px, 0, 0);
+    filter: brightness(1.2) saturate(1.2);
+  }
+  8% {
+    transform: translate3d(-3px, 0, 0);
+    filter: brightness(0.8) hue-rotate(-90deg);
+  }
+  10% {
+    transform: translate3d(2px, 0, 0);
+    filter: brightness(1.15);
+  }
+  12% {
+    transform: translate3d(-1px, 0, 0);
+    filter: brightness(0.85) hue-rotate(180deg);
+  }
+  14% {
+    transform: translate3d(3px, 0, 0);
+    filter: brightness(1.1);
+  }
+  16% {
+    transform: translate3d(-2px, 0, 0);
+    filter: brightness(0.9) saturate(1.3);
+  }
+  18% {
+    transform: translate3d(1px, 0, 0);
+    filter: brightness(1.05) hue-rotate(45deg);
+  }
+  20% {
+    transform: translate3d(-2px, 0, 0);
+    filter: brightness(0.95);
+  }
+  22%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+.cv_download {
+  display: inline-block;
+  font-size: 38px;
+  font-family: "Long Cang", cursive;
+  color: white;
+  text-decoration: none;
+  transition: 0.4s ease-out;
+  margin-top: 4vh;
+}
+
+.cv_download:hover {
+  color: darkgreen;
+}
+
+#contact_container {
+  overflow-y: auto;
+}
+
 .container form input:focus {
   outline: none;
   border-bottom: 3px solid rgba(255, 255, 255, 1);
@@ -436,6 +614,11 @@ form:valid .btn_one {
     width: 90%;
   }
 
+  .cv_download {
+    font-size: 38px;
+    margin-top: 3vh;
+  }
+
   #menu {
     display: block;
   }
@@ -450,10 +633,6 @@ form:valid .btn_one {
     border: 1px solid darkgreen;
     border-radius: 30px;
     transition: 0.3s;
-  }
-
-  #menu a:nth-child(2) {
-    border: 1px red solid;
   }
 
   #menu a:hover {
@@ -527,7 +706,7 @@ h2 a span {
 }
 
 iframe {
-  display: none;
+  display: block;
 }
 
 .gallery-wrapper {

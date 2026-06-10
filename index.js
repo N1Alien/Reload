@@ -3,13 +3,6 @@ let innerHight = null;
 let returnHight = null;
 const introMessage = "There is no spoon.";
 
-function add(){
-    $('button').addClass("animated flip");
-    setTimeout(function () {
-        $("button").removeClass("animated flip");
-    }, 2000);
-}
-
 function showabout() {
     hideLanding();
     $("#about_container").css("display", "inherit");
@@ -258,19 +251,5 @@ const martixRain = () => {
 
     setInterval(draw, 33);
 
-}
-
-document.getElementById("form").addEventListener("submit", reload);
-
-function reload() {
-    closecontact();
-   // Get the modal
-var modal = document.getElementById("myModal");
-
-  modal.style.display = "block";
-
-    setTimeout(() => {
-        document.location.href = "index.html"
-    }, 1200)
 }
 

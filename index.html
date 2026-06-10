@@ -53,7 +53,7 @@
     <canvas id="canvas"></canvas>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">myself</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">hacked</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">red pill</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">CV</a>
     <div id="middle" class="animated bounceInDown" style="animation-delay:2.0s;">
         <h1 id="title" class="effect-shine TextGlitch">
             <div class="TextGlitch-clip">
@@ -74,9 +74,9 @@
         </h1>
         <h2><a href="https://www.facebook.com/tyskie.bond" target="_blank">Developer <span>&&</span> Traveler</a></h2>
         <div id="menu">
-            <a onclick="showabout()">myself</a>
-            <a onclick="showcontact()">red pill</a>
-            <a onclick="showwork()">hacked</a>
+            <a onclick="showabout()">MYSELF</a>
+            <a onclick="showcontact()">CV</a>
+            <a onclick="showwork()">HACKED</a>
         </div>
         <table>
             <tr>
@@ -265,28 +265,23 @@
     </div>
     <div id="contact_container" class="container">
         <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1>contact me</h1>
-        <section>
-            <form onsubmit="reload()" id="form" method="POST" id="gform"
-                action="https://script.google.com/macros/s/AKfycbx1-VeIEbxz5MUyYe5di9zvdjxP-YdpKxgkaLOo/exec">
-                <input type="text" placeholder="name" id="name" name="name" minlength="3" autocomplete="off" required>
-                <input type="email" placeholder="email" id="email" name="email"
-                    pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="off" required><br>
-                <textarea placeholder="your message" rows="5" id="message" name="message" minlength="3" maxlength="40"
-                    spellcheck="true" autocomplete="off" required></textarea><br>
-                <button class="btn_one " onclick="add()">send</button>
-            </form>
+        <h1>curriculum vitae</h1>
+        <section class="image-position" style="min-height: 100%;">
+            <div class="cv-glitch-demo">
+                <div class="cv-glitch">
+                    <div class="cv-glitch__img"></div>
+                    <div class="cv-glitch__img"></div>
+                    <div class="cv-glitch__img"></div>
+                    <div class="cv-glitch__img"></div>
+                    <div class="cv-glitch__img"></div>
+                </div>
+            </div>
+            <a class="cv_download" href="img/Blue%20Minimal%20Infographic%20Resume.pdf" target="_blank"
+                rel="noopener">download cv</a>
         </section>
     </div>
     <div id="footer">
         © Slawomir Kaczynski
-    </div>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Thank You. Have a great day!</p>
-        </div>
     </div>
     <script src="glitch.js"></script>
     <script src="index.js" type="text/javascript"></script>

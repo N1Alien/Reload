@@ -171,7 +171,7 @@ body {
 #contact:hover {
   background: black;
   cursor: pointer;
-  border: red 1px solid;
+  border: green 1px solid;
   border-bottom: none;
   color: green;
 }
@@ -399,11 +399,6 @@ body {
       border: 1px solid darkgreen;
       border-radius: 30px;
       transition: .3s;
-
-      &:nth-child(2) {
-        border: 1px red solid;
-      }
-
       &:hover {
         background-color: transparent;
         color: darkgreen;
