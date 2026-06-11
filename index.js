@@ -31,11 +31,17 @@ function hideLanding() {
 
 function showLanding() {
     $('#middle, #footer').removeClass('landing-hidden');
-    $('#about, #work, #contact').css({
-        display: 'flex',
-        animationDelay: '0s',
-        WebkitAnimationDelay: '0s'
-    });
+    // Only show buttons on desktop (> 800px), let CSS media queries handle mobile
+    if (window.innerWidth > 800) {
+        $('#about, #work, #contact').css({
+            display: 'flex',
+            animationDelay: '0s',
+            WebkitAnimationDelay: '0s'
+        });
+    } else {
+        // Remove inline styles to let CSS media queries take over
+        $('#about, #work, #contact').css('display', '');
+    }
 }
 
 function closeabout() {

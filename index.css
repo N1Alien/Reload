@@ -355,13 +355,15 @@ body {
   width: 32px;
   min-width: 500px;
   min-height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .cv-glitch {
   position: absolute;
   top: 0;
   left: 0;
-  width: var(--glitch-width);
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -377,7 +379,8 @@ body {
   min-height: 800px;
   background: url("./img/Blue%20Minimal%20Infographic%20Resume.jpg");
   background-color: var(--blend-color-1);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   transform: translate3d(0, 0, 0);
   background-blend-mode: var(--blend-mode-1);
@@ -904,7 +907,6 @@ iframe {
 
 .glitch__img {
   position: absolute;
-  position: absolute;
   left: 0;
   top: 0;
   transform: translate(50%, 50%);
@@ -1385,6 +1387,64 @@ iframe {
   .glitch__img {
     min-width: 300px;
     min-height: 450px;
+  }
+
+  .cv-glitch-demo {
+    min-width: 300px;
+    min-height: 450px;
+  }
+
+  .cv-glitch__img {
+    min-width: 300px;
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cv-glitch-demo {
+    min-width: 320px;
+    min-height: 500px;
+  }
+
+  .cv-glitch__img {
+    min-width: 320px;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 630px) {
+  .cv-glitch-demo {
+    width: 90vw;
+    min-width: 0;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 5 / 8;
+    overflow: hidden;
+  }
+
+  .cv-glitch,
+  .cv-glitch__img {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .cv-glitch__img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .cv-glitch-demo {
+    width: 88vw;
+    overflow: hidden;
+  }
+
+  .cv-glitch__img {
+    background-size: contain;
   }
 }
 
