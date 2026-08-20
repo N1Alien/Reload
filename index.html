@@ -28,6 +28,46 @@
         }
         window.onload = load;
     </script>
+    <style>
+        #work_container .gallery-item img {
+            opacity: 0.5;
+            border: 1px solid #2e8b57;
+            box-shadow: 0 0 3px rgba(46, 139, 87, 0.35);
+            animation: greenBorder 3.1s infinite;
+        }
+
+        @keyframes greenBorder {
+            0% {
+                border-color: #1f5f3a;
+                box-shadow: 0 0 2px rgba(31, 95, 58, 0.25);
+            }
+
+            17% {
+                border-color: #2e8b57;
+                box-shadow: 0 0 3px rgba(46, 139, 87, 0.35);
+            }
+
+            39% {
+                border-color: #3aa76d;
+                box-shadow: 0 0 2px rgba(58, 167, 109, 0.3);
+            }
+
+            61% {
+                border-color: #2b7a4b;
+                box-shadow: 0 0 4px rgba(43, 122, 75, 0.35);
+            }
+
+            83% {
+                border-color: #4caf70;
+                box-shadow: 0 0 2px rgba(76, 175, 112, 0.3);
+            }
+
+            100% {
+                border-color: #245f3f;
+                box-shadow: 0 0 3px rgba(36, 95, 63, 0.3);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -157,7 +197,7 @@
                 </a>
                 <a href="https://colab.research.google.com/drive/1-pMj6npgndn0c_XlcM6_-nl1CD88lJyf" target="_blank" class="gallery-item">
                     <figure>
-                        <img src="img/hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png" alt="image">
+                        <img src="img/python.png" alt="image">
                         <figcaption>
                             <p>Python calculator project</p>
                         </figcaption>
