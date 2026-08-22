@@ -785,7 +785,7 @@ iframe {
 }
 
 .gallery-item:nth-child(2) figcaption {
-  background-image: url(https://media.giphy.com/media/W9lzJDwciz6bS/giphy.gif);
+    background-image: url(https://media.giphy.com/media/7NWhfa1lEHPqw/giphy.gif);
 }
 
 .gallery-item:nth-child(3) figcaption {
@@ -805,7 +805,7 @@ iframe {
 }
 
 .gallery-item:nth-child(7) figcaption {
-  background-image: url(https://media.giphy.com/media/7NWhfa1lEHPqw/giphy.gif);
+  background-image: url(https://media.giphy.com/media/W9lzJDwciz6bS/giphy.gif);
 }
 
 .gallery-item:nth-child(8) figcaption {
